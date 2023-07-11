@@ -27,6 +27,7 @@ const Navbar = () => {
           <MenuSVG className='w-[30px] h-[30px] mt-1 sm:hidden' />
         </button>
         <Logo className='mt-2 w-[75px] sm:w-[120px] lg:w-[150px]' />
+
         <ul className='hidden sm:flex list-none'>
           {Menus.map((menu, index) => (
             <li key={index} className='flex shrink flex-col'>
