@@ -8,7 +8,7 @@ const CloseSVG = (props) => (
     className=''
   >
     <path
-    className='fill-gray-500 dark:fill-gray-200'
+    className='fill-black dark:fill-gray-200'
     d="m249-207-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
   </svg>
 );
