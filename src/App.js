@@ -1,7 +1,9 @@
 import {
   BrowserRouter, Route, Routes,
 } from 'react-router-dom';
-import { Navbar, ItemDetailContainer, ItemListContainer } from './components';
+import {
+  Navbar, ItemDetailContainer, ItemListContainer, Home,
+} from './components';
 
 function App() {
   return (
@@ -9,8 +11,10 @@ function App() {
       <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route exact path='/' element={<ItemListContainer />}></Route>
-        <Route exact path='/categoria/productos' element={<ItemListContainer />}></Route>
+        <Route exact path='/' element={<Home/>}></Route>
+        <Route exact path='/categoria/inicio' element={<Home/>}></Route>
+        <Route exact path='/categoria/productos/' element={<ItemListContainer />}></Route>
+        <Route exact path='/categoria/productos/:id' element={<ItemListContainer />}></Route>
         <Route exact path='/productos/:id' element={<ItemDetailContainer/>}></Route>
       </Routes>
       </BrowserRouter>

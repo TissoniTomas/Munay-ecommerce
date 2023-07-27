@@ -5,3 +5,4 @@ export { default as MenuSVG } from './MenuSVG.jsx';
 export { default as SunSVG } from './SunSVG.jsx';
 export { default as Logo } from './LogoSVG.jsx';
 export { default as CloseSVG } from './CloseSVG.jsx';
+export { default as ExpandSVG } from './ExpandSVG.jsx';

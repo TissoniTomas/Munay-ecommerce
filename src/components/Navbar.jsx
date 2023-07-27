@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import {
-  Logo, DarkSVG, MenuSVG, SunSVG, CloseSVG,
+  Logo, DarkSVG, MenuSVG, SunSVG, CloseSVG, ExpandSVG,
 } from '../assets/icons';
 import Menus from '../constants/Menus.jsx';
 
 import CartWidget from './CartWidget.jsx';
 import Sidebar from './Sidebar.jsx';
+import Categories from './Categories.jsx';
 
 const Navbar = () => {
   const [productsAmount, setProductsAmount] = useState(0);
@@ -18,6 +19,12 @@ const Navbar = () => {
 
   const toggleSidebar = () => {
     setIsSideBarOpen(!isSideBarOpen);
+  };
+
+  const [showMenuIndex, setShowMenuIndex] = useState(false);
+
+  const handleMenuToggle = (index) => {
+    setShowMenuIndex(index);
   };
 
   const linkClass = 'flex flex-col items-center uppercase dark:text-white font-medium p-1 mr-4 mt-3 sm:text-sm md:text-lg lg:text-xl xl:text-2xl xl:gap-4hover:text-green dark:hover:text-green';
@@ -35,12 +42,24 @@ const Navbar = () => {
 
         <ul className='hidden sm:flex list-none'>
           {Menus.map((menu, index) => (
-            <li key={index} className='flex shrink flex-col'>
+            <li
+            key={index}
+            className='flex shrink flex-col'
+            onMouseEnter={() => handleMenuToggle(index)}
+            onMouseLeave={() => handleMenuToggle(null)}
+            >
               <NavLink
                 to={`/categoria/${menu.title.toLowerCase()}`}
-                className={(navData) => (navData.isActive ? `${linkClass} text-green dark:text-green` : `${linkClass}`)}
+                className={(navData) => (navData.isActive ? `${linkClass} text-black dark:text-white` : `${linkClass}`)}
               >
+                <div className='flex items-center   '>
                 {menu.title}
+                {index === 1 && <ExpandSVG />}
+                {showMenuIndex === index && index === 1 && (
+                  <Categories/>
+                )}
+                </div>
+
               </NavLink>
             </li>
           ))}
