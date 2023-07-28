@@ -8,10 +8,6 @@ const ItemDetailContainer = () => {
   const { id } = useParams();
   const { data: product, loading } = useFetch(URL, id);
 
-  const getProductId = () => {
-    console.log(id);
-  };
-  console.log(product);
   if (loading) {
     return <p className='text-center text-2xl dark:text-white'>Loading...</p>;
   }
@@ -20,7 +16,6 @@ const ItemDetailContainer = () => {
 
      <EcommerceCard
      product={product}
-     getProductId={getProductId}
      />
      </div>
   );

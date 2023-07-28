@@ -12,6 +12,7 @@ import Categories from './Categories.jsx';
 const Navbar = () => {
   const [productsAmount, setProductsAmount] = useState(0);
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
+  const [showMenuIndex, setShowMenuIndex] = useState(false);
 
   const toggleDarkMode = () => {
     document.documentElement.classList.toggle('dark');
@@ -21,13 +22,15 @@ const Navbar = () => {
     setIsSideBarOpen(!isSideBarOpen);
   };
 
-  const [showMenuIndex, setShowMenuIndex] = useState(false);
-
   const handleMenuToggle = (index) => {
     setShowMenuIndex(index);
   };
 
-  const linkClass = 'flex flex-col items-center uppercase dark:text-white font-medium p-1 mr-4 mt-3 sm:text-sm md:text-lg lg:text-xl xl:text-2xl xl:gap-4hover:text-green dark:hover:text-green';
+  const closeSidebar = () => {
+    setIsSideBarOpen(false);
+  };
+
+  const linkClass = 'flex flex-col items-center uppercase text-black dark:text-white font-medium p-1 mr-4 mt-3 sm:text-sm md:text-lg lg:text-xl xl:text-2xl xl:gap-4 hover:text-green dark:hover:text-green';
   return (
 
     <nav className='w-full flex flex-col'>
@@ -43,21 +46,25 @@ const Navbar = () => {
         <ul className='hidden sm:flex list-none'>
           {Menus.map((menu, index) => (
             <li
-            key={index}
-            className='flex shrink flex-col'
-            onMouseEnter={() => handleMenuToggle(index)}
-            onMouseLeave={() => handleMenuToggle(null)}
+              key={index}
+              className='flex shrink flex-col'
+              onMouseEnter={() => handleMenuToggle(index)}
+              onMouseLeave={() => handleMenuToggle(null)}
+              onClick={() => handleMenuToggle(index)}
             >
               <NavLink
                 to={`/categoria/${menu.title.toLowerCase()}`}
-                className={(navData) => (navData.isActive ? `${linkClass} text-black dark:text-white` : `${linkClass}`)}
+                className={(navData) => (navData.isActive ? `${linkClass} text-green dark:text-green` : `${linkClass}`)}
+
               >
-                <div className='flex items-center   '>
-                {menu.title}
-                {index === 1 && <ExpandSVG />}
-                {showMenuIndex === index && index === 1 && (
-                  <Categories/>
-                )}
+                <div className='relative items-center'>
+                  <div className='flex items-center'>
+                  {menu.title}
+                  {index === 1 && <ExpandSVG />}
+                  </div>
+                  {showMenuIndex === index && index === 1 && (
+                    <Categories closeSideBar={closeSidebar} />
+                  )}
                 </div>
 
               </NavLink>
@@ -79,7 +86,7 @@ const Navbar = () => {
       <div className='w-full flex justify-center mt-1 md:mt-3 lg:mt-1'>
         <hr className='w-full h-[1px] sm:w-[93%] sm:h-[2px] lg:w-[97%] bg-green border-0' />
       </div>
-      <Sidebar isOpen={isSideBarOpen} />
+      <Sidebar isOpen={isSideBarOpen} setIsOpen={setIsSideBarOpen}/>
     </nav>
   );
 };

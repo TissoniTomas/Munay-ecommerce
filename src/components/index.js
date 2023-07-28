@@ -6,3 +6,5 @@ export { default as ItemDetailContainer } from './ItemDetailContainer.jsx';
 export { default as EcommerceCard } from './EcommerceCard.jsx';
 export { default as Categories } from './Categories.jsx';
 export { default as Home } from './Home.jsx';
+export { default as Contact } from './Contact.jsx';
+export { default as AboutUs } from './AboutUs.jsx';

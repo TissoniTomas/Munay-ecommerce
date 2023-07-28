@@ -9,7 +9,8 @@ module.exports = ({
         green: '#bdcf23',
       },
       gridTemplateColumns: {
-        '1fr-150px': 'repeat(auto-fit, minmax(150px, 1fr))',
+        '1fr-185px': 'repeat(auto-fit, minmax(185px, 1fr))',
+        '1fr-250px': 'repeat(auto-fit, minmax(250px, 1fr))',
       },
     },
   },
