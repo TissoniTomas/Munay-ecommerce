@@ -16,7 +16,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
   };
 
   return (
-    <div className={`absolute mt-[11%] w-[100%] z-1 transform transition-transform duration-300 ease-in-out bg-white dark:bg-black ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+    <div className={`z-10  absolute  mt-[11%] w-[100%] transform transition-transform duration-300 ease-in-out bg-white dark:bg-black ${isOpen ? 'translate-x-0 ' : '-translate-x-[150%]'}`}>
       <ul className='list-none'>
         {Menus.map((menu, index) => <li
           key={index}

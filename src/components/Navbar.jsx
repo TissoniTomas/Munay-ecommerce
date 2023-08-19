@@ -30,11 +30,11 @@ const Navbar = () => {
     setIsSideBarOpen(false);
   };
 
-  const linkClass = 'flex flex-col items-center uppercase text-black dark:text-white font-medium p-1 mr-4 mt-3 sm:text-sm md:text-lg lg:text-xl xl:text-2xl xl:gap-4 hover:text-green dark:hover:text-green';
+  const linkClass = 'flex flex-col items-center text-black dark:text-white font-normal p-1 mr-4 mt-3 sm:text-sm md:text-md lg:text-lg xl:text-xl xl:gap-4 hover:text-green dark:hover:text-green';
   return (
 
     <nav className='w-full flex flex-col'>
-      <div className='flex justify-between items-center py-1 px-4 md:px-11 md:py-3 lg:px-15 lg:py-5'>
+      <div className='flex justify-between items-center px-4 sm:px-0 py-1 md:py-3 lg:py-5'>
         <button onClick={toggleSidebar} className='sm:hidden'>
           {isSideBarOpen ? <CloseSVG width={30} />
             : <MenuSVG className='w-[30px] h-[30px] mt-1 sm:hidden' />
@@ -81,10 +81,10 @@ const Navbar = () => {
             <CartWidget productsAmount={productsAmount} />
           </button>
         </div>
-      </div>
 
+      </div>
       <div className='w-full flex justify-center mt-1 md:mt-3 lg:mt-1'>
-        <hr className='w-full h-[1px] sm:w-[93%] sm:h-[2px] lg:w-[97%] bg-green border-0' />
+        <hr className='w-full h-[1px] sm:h-[2px] bg-green border-0' />
       </div>
       <Sidebar isOpen={isSideBarOpen} setIsOpen={setIsSideBarOpen}/>
     </nav>

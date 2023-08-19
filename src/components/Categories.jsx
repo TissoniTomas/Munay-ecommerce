@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
 
-const linkClass = 'font-medium px-4 py-2 text-sm hover:bg-gray-100';
+const linkClass = 'font-normal px-4 py-2 text-sm hover:bg-gray-100 hover:font-medium';
 const Categories = () => {
   return (
-    <ul className="sm:absolute sm:top-[95%] sm:left-[50%] sm:py-2 sm:z-2 sm:rounded-xl sm:bg-white sm:shadow-2xl text-black dark:text-white sm:dark:text-black sm:text-black">
-     <Link to={'categoria/productos/smartphones'}><li className={linkClass}>Celulares</li></Link>
-     <Link to={'categoria/productos/laptops'}><li className={linkClass}>Laptops</li></Link>
-     <Link to={'categoria/productos/skincare'}><li className={linkClass}>Cremas</li></Link>
+    <ul className="z-10 sm:absolute sm:top-[95%] sm:left-[50%] sm:py-2 sm:rounded-xl sm:bg-white sm:shadow-2xl text-black dark:text-white sm:dark:text-black sm:text-black">
+     <Link to={'categoria/productos/sublimacion'}><li className={linkClass}>Sublimación</li></Link>
+     <Link to={'categoria/productos/encuadernado'}><li className={linkClass}>Cuadernos</li></Link>
+     <Link to={'categoria/productos/tela'}><li className={linkClass}>Tela</li></Link>
    </ul>
   );
 };
