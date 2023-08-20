@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 
 const useGetProductsById = (id) => {
   const [products, setProducts] = useState(null);
+  const [loading, setLoading] = useState(true); // Estado para el indicador de carga
 
   useEffect(() => {
     const db = getFirestore();
@@ -19,9 +20,12 @@ const useGetProductsById = (id) => {
 
         setProducts(product);
       }
-    }).catch((err) => console.error(err));
-  }, []);
-  return { products };
+    }).catch((err) => console.error(err))
+      .finally(() => {
+        setLoading(false); // Después de la solicitud, ocultamos el indicador de carga
+      });
+  }, [id]);
+  return { products, loading };
 };
 
 export default useGetProductsById;
