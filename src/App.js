@@ -2,7 +2,7 @@ import {
   BrowserRouter, Route, Routes,
 } from 'react-router-dom';
 import {
-  Navbar, ItemDetailContainer, ItemListContainer, Home, AboutUs, Contact,
+  Navbar, ItemDetailContainer, ItemListContainer, Home, AboutUs, Contact, CartWidget,
 } from './components';
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
               <Route exact path='/categoria/productos/' element={<ItemListContainer />}></Route>
               <Route exact path='/categoria/productos/:id' element={<ItemListContainer />}></Route>
               <Route exact path='/productos/:id' element={<ItemDetailContainer />}></Route>
+              <Route exact path='/carrito' element={<CartWidget />}></Route>
             </Routes>
           </BrowserRouter>
     </div>

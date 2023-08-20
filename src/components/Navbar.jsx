@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import {
-  Logo, DarkSVG, MenuSVG, SunSVG, CloseSVG, ExpandSVG,
+  Logo, DarkSVG, MenuSVG, SunSVG, CloseSVG, ExpandSVG, CartSVG,
 } from '../assets/icons';
 import Menus from '../constants/Menus.jsx';
 
@@ -77,9 +77,9 @@ const Navbar = () => {
             <DarkSVG className='dark:hidden w-[25px] md:w-[31px]' />
             <SunSVG className='hidden dark:block w-[25px] md:w-[31px]' />
           </button>
-          <button onClick={() => setProductsAmount(productsAmount + 1)}>
-            <CartWidget productsAmount={productsAmount} />
-          </button>
+          <Link to={'/carrito'}>
+          <CartSVG color='#fff' className='w-[20px] sm:w-[25px]'/>
+          </Link>
         </div>
 
       </div>

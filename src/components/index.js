@@ -11,3 +11,6 @@ export { default as AboutUs } from './AboutUs.jsx';
 export { default as ProductsHomeCard } from './ProductsHomeCard.jsx';
 export { default as FollowUs } from './FollowUs.jsx';
 export { default as Footer } from './Footer.jsx';
+export { default as CartProduct } from './CartProduct.jsx';
+export { default as SummaryCard } from './SummaryCard.jsx';
+export { default as NumberInputsWithButtons } from './NumberInputsWithButtons.jsx';

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const Logo = ({ productsAmount, ...props }) => (
+const Logo = ({ ...props }) => (
   <div>
 
     <svg

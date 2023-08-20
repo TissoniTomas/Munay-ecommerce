@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 
 const useGetProductsById = (id) => {
   const [products, setProducts] = useState(null);
-  console.log(id);
 
   useEffect(() => {
     const db = getFirestore();
@@ -13,7 +12,6 @@ const useGetProductsById = (id) => {
     getDoc(documentRef).then((snapshot) => {
       if (snapshot.exists()) {
         const data = snapshot.data();
-        console.log(data);
         const product = {
           id: snapshot.id,
           ...data,
@@ -23,7 +21,6 @@ const useGetProductsById = (id) => {
       }
     }).catch((err) => console.error(err));
   }, []);
-
   return { products };
 };
 

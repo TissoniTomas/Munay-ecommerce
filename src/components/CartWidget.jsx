@@ -1,14 +1,23 @@
-import React from 'react';
-import { CartSVG } from '../assets/icons';
+import React, { useState } from 'react';
+import { useCartContext } from '../provider/CartContext.jsx';
+import CartProduct from './CartProduct.jsx';
+import SummaryCard from './SummaryCard.jsx';
 
-const CartWidget = ({ productsAmount }) => {
+const CartWidget = () => {
+  const { cartItems } = useCartContext();
+  const [show, setShow] = useState(false);
+
+  console.log(cartItems);
   return (
     <div>
-    < CartSVG color='#fff' productsAmount={productsAmount} className='w-[20px] sm:w-[25px]'/>
-    <div className='absolute  right-[-8px] top-[-6px]'>
-    <span className='flex items-center justify-center rounded-full bg-green w-[15px] h-[15px] p-2 text-center text-[0.7rem] font-bold'>{productsAmount}</span>
+      {
+        <div className="flex md:flex-row flex-col items-center" id="cart">
+          <CartProduct />
+          <SummaryCard />
+        </div>
+      }
     </div>
-    </div>
+
   );
 };
 
