@@ -15,12 +15,14 @@ const NumberInputsWithButtons = ({ quantity }) => {
 
   return (
 <div className="flex items-center">
-  <button className="border border-gray-300 rounded-l h-[20px] w-[20px] flex items-center justify-center" onClick={decreaseValue}>
-    <span className="text-sm font-bold">-</span>
+  <button className="border border-gray-300 rounded-[100%] h-[20px] w-[20px]  items-center justify-center hidden md:flex" onClick={decreaseValue}>
+    <span className="text-sm font-bold dark:text-white">-</span>
   </button>
-  <input className="border-t border-b border-gray-300 w-[50px] h-[20px] px-3 py-1 text-center" type="number" value={value} readOnly />
-  <button className="border border-gray-300 rounded-r h-[20px] w-[20px] flex items-center justify-center" onClick={increaseValue}>
-    <span className="text-sm font-bold">+</span>
+  <div className="text-center flex items-center justify-center px-1 font-bold dark:text-white">
+    <span>{value}</span>
+  </div>
+  <button className="border border-gray-300 rounded-[100%] h-[20px] w-[20px]  items-center justify-center hidden md:flex" onClick={increaseValue}>
+    <span className="text-sm font-bold dark:text-white">+</span>
   </button>
 </div>
 

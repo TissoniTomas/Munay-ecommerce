@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useCartContext } from '../provider/CartContext.jsx';
 import CartProduct from './CartProduct.jsx';
 import SummaryCard from './SummaryCard.jsx';
 
 const CartWidget = () => {
   const { cartItems } = useCartContext();
-  const [show, setShow] = useState(false);
 
   console.log(cartItems);
   return (

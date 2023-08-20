@@ -5,6 +5,7 @@ const CloseSVG = (props) => (
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 -960 960 960"
     {...props}
+    className='min-w-[20px]'
   >
     <path
       className={props.color ? 'fill-red-600' : 'fill-black dark:fill-gray-200'}
