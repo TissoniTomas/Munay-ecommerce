@@ -14,3 +14,5 @@ export { default as Footer } from './Footer.jsx';
 export { default as CartProduct } from './CartProduct.jsx';
 export { default as SummaryCard } from './SummaryCard.jsx';
 export { default as NumberInputsWithButtons } from './NumberInputsWithButtons.jsx';
+export { default as InstaCard } from './InstaCard.jsx';
+export { default as ProductCatalog } from './ProductCatalog.jsx';

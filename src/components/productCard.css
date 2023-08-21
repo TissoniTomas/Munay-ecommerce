@@ -98,3 +98,15 @@ height:275px;
   height: 277px;
   width: auto;
 }
+
+@media (max-width: 640px) {
+    .card {
+        height: 350px
+    }
+    .card .imgBox{
+    height:206px
+    }
+    .mouse{
+    height: 240px
+    }
+}

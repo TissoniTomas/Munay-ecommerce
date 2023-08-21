@@ -53,20 +53,18 @@ const Navbar = () => {
               onClick={() => handleMenuToggle(index)}
             >
               <NavLink
-                to={`/categoria/${menu.title.toLowerCase()}`}
+                to={menu.title === 'Inicio' ? '/' : `/categoria/${menu.title.toLowerCase()}`}
                 className={(navData) => (navData.isActive ? `${linkClass} text-green dark:text-green` : `${linkClass}`)}
-
               >
                 <div className='relative items-center'>
                   <div className='flex items-center'>
-                  {menu.title}
-                  {index === 1 && <ExpandSVG />}
+                    {menu.title}
+                    {index === 1 && <ExpandSVG />}
                   </div>
                   {showMenuIndex === index && index === 1 && (
                     <Categories closeSideBar={closeSidebar} />
                   )}
                 </div>
-
               </NavLink>
             </li>
           ))}
@@ -78,7 +76,7 @@ const Navbar = () => {
             <SunSVG className='hidden dark:block w-[25px] md:w-[31px]' />
           </button>
           <Link to={'/carrito'}>
-          <CartSVG color='#fff' className='w-[20px] sm:w-[25px]'/>
+            <CartSVG color='#fff' className='w-[20px] sm:w-[25px]' />
           </Link>
         </div>
 
@@ -86,7 +84,7 @@ const Navbar = () => {
       <div className='w-full flex justify-center mt-1 md:mt-3 lg:mt-1'>
         <hr className='w-full h-[1px] sm:h-[2px] bg-green border-0' />
       </div>
-      <Sidebar isOpen={isSideBarOpen} setIsOpen={setIsSideBarOpen}/>
+      <Sidebar isOpen={isSideBarOpen} setIsOpen={setIsSideBarOpen} />
     </nav>
   );
 };

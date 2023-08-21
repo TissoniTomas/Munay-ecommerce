@@ -8,7 +8,7 @@ const ItemListContainer = () => {
 
   const { id } = useParams();
 
-  const { products } = useGetProducts();
+  const { products, loading } = useGetProducts();
   const getFilteredProducts = (dataProduct) => {
     return dataProduct?.filter((product) => product.category === id);
   };
@@ -21,17 +21,17 @@ const ItemListContainer = () => {
     setfilteredData(filteredProducts);
   }, [id, products]);
 
-  // if (loading) {
-  //   return <p className='text-center text-2xl dark:text-white'>Loading...</p>;
-  // }
+  if (loading) {
+    return <p className='text-center text-2xl dark:text-white'>Loading...</p>;
+  }
   return (
-    <div className=' grid grid-cols-1fr-150px sm:grid-cols-1fr-250px gap-4 p-5 justify-center'>
-  {filteredData?.map((product) => (
-    <ProductCard
-    key={product.id}
-    product={product}
-    />
-  ))}
+    <div className=' grid grid-cols-1fr-150px sm:grid-cols-1fr-250px gap-4 p-5 justify-center sm:items-center sm:gap-7'>
+      {filteredData?.map((product) => (
+        <ProductCard
+          key={product.id}
+          product={product}
+        />
+      ))}
     </div>
   );
 };

@@ -22,7 +22,7 @@ const useGetProductsById = (id) => {
       }
     }).catch((err) => console.error(err))
       .finally(() => {
-        setLoading(false); // Después de la solicitud, ocultamos el indicador de carga
+        setLoading(false);
       });
   }, [id]);
   return { products, loading };

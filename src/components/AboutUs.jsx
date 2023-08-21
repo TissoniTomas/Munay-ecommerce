@@ -1,13 +1,13 @@
 import React from 'react';
 
-const About3 = () => {
+const AboutUs = () => {
   return (
     <div className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
-      <p className="font-normal text-sm leading-3 text-indigo-700 hover:text-indigo-800 cursor-pointer pb-2">Nosotros</p>
+      <p className="font-normal text-sm leading-3 text-green cursor-pointer pb-2">Nosotros</p>
       <div className="flex lg:flex-row flex-col lg:gap-8 sm:gap-10 gap-12">
         <div className="w-full lg:w-6/12">
-          <h2 className="w-full font-bold lg:text-4xl text-3xl lg:leading-10 leading-9">Estamos aquí para hacer un gran diseño accesible y agradable para todos.</h2>
-          <p className="font-normal text-base leading-6 text-gray-600 mt-6">Es un hecho establecido desde hace mucho tiempo que un lector se distraerá con el contenido legible de una página cuando mire su diseño.</p>
+          <h2 className="w-full font-bold lg:text-4xl text-3xl lg:leading-10 leading-9 dark:text-white">Estamos aquí para hacer un gran diseño accesible y agradable para todos.</h2>
+          <p className="font-normal text-base leading-6 dark:text-white mt-6">En el corazón de nuestra labor yace una pasión inquebrantable por diseñar. Estamos aquí con un propósito claro: forjar diseños que trasciendan barreras, que abracen la diversidad de perspectivas y que despierten emociones. Desde la sutileza de los detalles hasta la amplitud de las formas, nuestra misión es tejer un gran diseño que sea tanto accesible como irresistible para todos. Cada trazo, cada elemento, es una oportunidad para fusionar creatividad y funcionalidad en una armonía perfecta. A medida que avanzamos, no solo construimos diseños, sino también puentes entre el arte y la practicidad, entre la estética y la utilidad. Somos los narradores visuales de historias infinitas, y cada proyecto es un capítulo nuevo en nuestra búsqueda incesante de la excelencia creativa. Bienvenidos a un mundo donde el diseño se convierte en un lenguaje universal, donde cada creación es un testimonio de nuestro compromiso con la belleza y la inclusión. Estamos aquí para dar vida a tus visiones, para convertir ideas en realidades palpables y para elevar la experiencia estética a niveles sin precedentes. En este viaje, descubrimos que el diseño no tiene límites, y estamos ansiosos por explorar y conquistar nuevos horizontes junto a ti.</p>
         </div>
         <div className="w-full lg:w-6/12">
           <img className="lg:block hidden w-full" src="https://lh3.googleusercontent.com/p/AF1QipMh9P5qt-3hO_m3XLsT2lu-8PlMD6qOwEvS6J20=s680-w680-h510" alt="people discussing on board" />
@@ -47,16 +47,16 @@ const About3 = () => {
       </div>
       <div className="grid sm:grid-cols-3 grid-cols-2 sm:gap-8 gap-4">
         <div>
-          <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 mt-6">Fundación</p>
-          <p className="font-normal text-base leading-6 text-gray-600 mt-6">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+          <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 dark:text-white   mt-6">Fundación</p>
+          <p className="font-normal text-base leading-6 dark:text-white mt-6">En nuestra fundación, escribimos nuestra historia con tinta y pasión. Desde las primeras páginas hasta las obras maestras, hemos creado un legado impreso que perdura. Únete a nuestro viaje de innovación y arte, donde cada impresión cuenta una historia única y duradera.</p>
         </div>
         <div>
-          <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 mt-6">5M invertidos</p>
-          <p className="font-normal text-base leading-6 text-gray-600 mt-6">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+          <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 dark:text-white   mt-6">5M invertidos</p>
+          <p className="font-normal text-base leading-6 dark:text-white mt-6">Nuestra inversión es en el poder de las ideas y la creatividad. Cada proyecto es una oportunidad para sembrar innovación y cosechar resultados sorprendentes. Con 5 millones de razones para creer en el futuro, estamos construyendo un camino hacia el éxito a través de inversiones estratégicas y visionarias</p>
         </div>
         <div className="sm:block hidden">
-          <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 mt-6">20k Clientes</p>
-          <p className="font-normal text-base leading-6 text-gray-600 mt-6">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+          <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 dark:text-white   mt-6">20k Clientes</p>
+          <p className="font-normal text-base leading-6 dark:text-white mt-6">Cada cliente es un mundo de posibilidades y desafíos. Hemos cruzado fronteras, tejiendo conexiones con más de 20,000 almas apasionadas por el diseño y la excelencia. Juntos, estamos creando historias únicas que dan vida a cada proyecto</p>
         </div>
       </div>
       <div className="sm:hidden block relative mt-8">
@@ -73,16 +73,16 @@ const About3 = () => {
       </div>
       <div className="sm:hidden grid sm:grid-cols-3 grid-cols-2 sm:gap-8 gap-4">
         <div>
-          <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 mt-6">400k User</p>
-          <p className="font-normal text-base leading-6 text-gray-600 mt-6">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+          <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 dark:text-white   mt-6">400k User</p>
+          <p className="font-normal text-base leading-6 dark:text-white mt-6">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
         </div>
       </div>
 
       <div className="flex lg:flex-row flex-col md:gap-14 gap-16 justify-between lg:mt-20 mt-16">
         <div className="w-full lg:w-6/12">
-          <h2 className="font-bold lg:text-4xl text-3xl lg:leading-9 leading-7 text-gray-800">Nuestra misión</h2>
-          <p className="font-normal text-base leading-6 text-gray-600 mt-6 w-full lg:w-10/12 xl:w-9/12">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.In the first place we have granted to God, and by this our present charter confirmed for us and our heirs forever that the English Church shall be free, and shall have her rights entire, and her liberties inviolate; and we will that it be thus observed; which is apparent from</p>
-          <p className="font-normal text-base leading-6 text-gray-600 w-full lg:w-10/12 xl:w-9/12 mt-10">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.In the first place we have granted to God, and by this our present charter confirmed for us and our heirs forever that the English Church shall be free, and shall have her rights entire, and her liberties inviolate; and we will that it be thus observed; which is apparent from</p>
+          <h2 className="font-bold lg:text-4xl text-3xl lg:leading-9 leading-7 text-gray-800 dark:text-white  ">Nuestra misión</h2>
+          <p className="font-normal text-base leading-6 dark:text-white mt-6 w-full lg:w-10/12 xl:w-9/12">Nuestra misión es labrar un sendero hacia la excelencia creativa y funcional. Guiados por nuestra pasión por el diseño, nos dedicamos a tejer historias visuales que trasciendan el tiempo y las fronteras. Cada proyecto que abordamos es una oportunidad para fusionar innovación y estética, creando soluciones que no solo cautiven visualmente, sino que también resuenen con propósito y significado. Nos esforzamos por ser catalizadores de cambio positivo a través del diseño, dejando una huella duradera en la percepción visual de las personas. Nuestro compromiso radica en cada detalle, en cada elección de color y forma, en cada interacción entre diseño y usuario. Somos narradores de la creatividad y el estilo, y cada diseño que creamos es un capítulo en nuestra búsqueda constante de la perfección estética. </p>
+          <p className="font-normal text-base leading-6 dark:text-white w-full lg:w-10/12 xl:w-9/12 mt-10">En última instancia, nuestra misión es elevar el arte del diseño a nuevas alturas y convertirlo en un legado que inspire, emocione y transforme.</p>
         </div>
         <div className="w-full lg:w-6/12">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 lg:gap-12 gap-10">
@@ -96,8 +96,8 @@ const About3 = () => {
                 </svg>
               </div>
               <div className="">
-                <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800">Equipo</p>
-                <p className="mt-2 font-normal text-base leading-6 text-gray-600">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 dark:text-white  ">Equipo</p>
+                <p className="mt-2 font-normal text-base leading-6 dark:text-white">Nuestro equipo es la amalgama perfecta de mentes creativas y apasionadas. Cada miembro aporta una perspectiva única y habilidades excepcionales a nuestra mesa de diseño</p>
               </div>
             </div>
 
@@ -112,8 +112,8 @@ const About3 = () => {
                 </svg>
               </div>
               <div className="">
-                <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800">Clientes</p>
-                <p className="mt-2 font-normal text-base leading-6 text-gray-600">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 dark:text-white  ">Clientes</p>
+                <p className="mt-2 font-normal text-base leading-6 dark:text-white">Nuestra comunidad de clientes es el corazón de todo lo que hacemos. Cada proyecto es una oportunidad para tejer relaciones significativas y construir conexiones duraderas. </p>
               </div>
             </div>
 
@@ -126,8 +126,8 @@ const About3 = () => {
                 </svg>
               </div>
               <div className="">
-                <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800">Email</p>
-                <p className="mt-2 font-normal text-base leading-6 text-gray-600">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 dark:text-white  ">Email</p>
+                <p className="mt-2 font-normal text-base leading-6 dark:text-white">Cualquier duda contáctanos  nuestro email: munaytucuman@gmail.com</p>
               </div>
             </div>
           </div>
@@ -137,4 +137,4 @@ const About3 = () => {
   );
 };
 
-export default About3;
+export default AboutUs;

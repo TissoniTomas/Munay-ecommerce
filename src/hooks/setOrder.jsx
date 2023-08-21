@@ -19,7 +19,6 @@ const useOrders = () => {
       };
 
       await addDoc(ordersCollectionRef, newOrder);
-      console.log('Orden creada exitosamente', newOrder);
     } catch (error) {
       console.error('Error al crear la orden', error);
     } finally {
