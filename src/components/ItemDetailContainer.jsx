@@ -7,8 +7,7 @@ import { useCartContext } from '../provider/CartContext.jsx';
 const ItemDetailContainer = () => {
   const { id } = useParams();
   const { products, loading } = useGetProductsById(id);
-  const [rotate, setRotate] = useState(false);
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
   const { addItem } = useCartContext();
   const addCartItem = () => {
     addItem(products, count);
@@ -18,34 +17,20 @@ const ItemDetailContainer = () => {
   };
 
   const minusCount = () => {
-    if (count > 0) {
-      setCount((prev) => prev - 1);
+    if (count > 1) {
+      setCount(count - 1);
     }
   };
+
   if (loading) {
     return <p className='text-center text-2xl dark:text-white'>Loading...</p>;
   }
   return (
     <div className="2xl:CardContainer 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4 ">
       <div className="flex justify-center items-center lg:flex-row flex-col gap-8">
-        {/* <!-- Description Div --> */}
-
-        {/* <!-- Preview Images Div For larger Screen--> */}
-
         <div className=" w-full sm:w-96 md:w-8/12  lg:w-6/12 flex lg:flex-row flex-col lg:gap-8 sm:gap-6 gap-4">
           <div className=" w-full lg:w-8/12 bg-gray-100 flex justify-center items-center">
-            <img src="" alt="Wooden Chair Previw" />
-          </div>
-          <div className=" w-full lg:w-4/12 grid lg:grid-cols-1 sm:grid-cols-4 grid-cols-2 gap-6">
-            <div className="bg-gray-100 flex justify-center items-center py-4">
-              <img src="" alt="Wooden chair - preview 1" />
-            </div>
-            <div className="bg-gray-100 flex justify-center items-center py-4">
-              <img src="" alt="Wooden chair - preview 2" />
-            </div>
-            <div className="bg-gray-100 flex justify-center items-center py-4">
-              <img src="" alt="Wooden chair- preview 3" />
-            </div>
+            <img src={products.img} alt={products.title} />
           </div>
         </div>
         <div className="  w-full sm:w-96 md:w-8/12 lg:w-6/12 items-center">
@@ -59,10 +44,16 @@ const ItemDetailContainer = () => {
             <div className="flex flex-row justify-between">
               <p className=" font-medium text-base leading-4 text-gray-600 dark:text-white">Seleccionar cantidad</p>
               <div className="flex">
-                <span onClick={minusCount} className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer border border-gray-300 border-r-0 w-7 h-7 flex items-center justify-center pb-1 dark:text-white">
+                <span
+                  onClick={minusCount}
+                  className={'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer border border-r-0 w-7 h-7 flex items-center justify-center pb-1 dark:text-white'}
+                >
                   -
                 </span>
-                <input id="counter" aria-label="input" className="border border-gray-300 h-full text-center w-14 pb-1 dark:text-white dark:bg-black" type="text" value={count} onChange={(e) => e.target.value} />
+                <input id="counter" aria-label="input" className="border border-gray-300 h-full text-center w-14 pb-1 dark:text-white dark:bg-black"
+                  type="text"
+                  value={count}
+                  onChange={(e) => e.target.value} />
                 <span onClick={addCount} className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 cursor-pointer border border-gray-300 border-l-0 w-7 h-7 flex items-center justify-center pb-1 dark:text-white">
                   +
                 </span>

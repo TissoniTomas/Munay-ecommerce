@@ -1,6 +1,15 @@
 import React from 'react';
+import Swal from 'sweetalert2';
 
 const Newsletter = () => {
+  const handleClick = () => {
+    Swal.fire({
+      icon: 'success',
+      title: '¡Email enviado correctamente!',
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  };
   return (
     <>
       <div className="p-6 container md:w-2/3 xl:w-auto mx-auto mt-5 flex flex-col xl:items-stretch justify-between xl:flex-row">
@@ -12,7 +21,7 @@ const Newsletter = () => {
           <p className="text-base leading-normal text-gray-600 dark:text-white text-center xl:text-left">Déjanos tu mail y nos contactamos con vos.</p>
           <div className="flex items-stretch mt-12">
             <input className="bg-gray-100 rounded-lg rounded-r-none text-base leading-none text-gray-800 dark:text-white p-5 w-4/5 border border-transparent focus:outline-none focus:border-gray-500" type="email" placeholder="Tu Email" />
-            <button className="w-32 rounded-l-none hover:bg-indigo-600 bg-indigo-700 rounded text-base font-medium leading-none text-white p-5 uppercase focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700">enviar</button>
+            <button onClick={ handleClick }className="w-32 rounded-l-none hover:bg-indigo-600 bg-indigo-700 rounded text-base font-medium leading-none text-white p-5 uppercase focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700">enviar</button>
           </div>
         </div>
       </div>

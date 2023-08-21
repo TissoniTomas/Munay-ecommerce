@@ -1,16 +1,12 @@
 import React from 'react';
-import { useCartContext } from '../provider/CartContext.jsx';
 import CartProduct from './CartProduct.jsx';
 import SummaryCard from './SummaryCard.jsx';
 
 const CartWidget = () => {
-  const { cartItems } = useCartContext();
-
-  console.log(cartItems);
   return (
     <div>
       {
-        <div className="flex md:flex-row flex-col items-center" id="cart">
+        <div className="flex flex-col lg:flex-row lg:gap-6 items-center lg:items-start" id="cart">
           <CartProduct />
           <SummaryCard />
         </div>

@@ -37,12 +37,12 @@ const Contact = () => {
                     </div>
                 </div>
                 <div className="xl:w-3/5 lg:w-3/5 border    h-full pb-5 xl:pl-0 rounded-tr rounded-br">
-                    <form id="contact" className="bg-white py-4 px-8 rounded-tr rounded-br">
-                        <h1 className="text-4xl text-black font-extrabold mb-6">Enter Details</h1>
+                    <form id="contact" className="bg-white dark:bg-black py-4 px-8 rounded-tr rounded-br">
+                        <h1 className="text-4xl dark:text-white font-extrabold mb-6">Completa el formulario</h1>
                         <div className="block xl:flex w-full flex-wrap justify-between mb-6">
                             <div className="w-2/4 max-w-xs mb-6 xl:mb-0">
                                 <div className="flex flex-col">
-                                    <label htmlFor="full_name" className="text-black text-sm font-semibold leading-tight tracking-normal mb-2">
+                                    <label htmlFor="full_name" className="dark:text-white text-sm font-semibold leading-tight tracking-normal mb-2">
                                         Nombre Completo
                                     </label>
                                     <input required id="full_name" name="full_name" type="text" className="focus:outline-none focus:border focus:border-indigo-700 font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder />
@@ -50,7 +50,7 @@ const Contact = () => {
                             </div>
                             <div className="w-2/4 max-w-xs xl:flex xl:justify-end">
                                 <div className="flex flex-col">
-                                    <label htmlFor="email" className="text-black text-sm font-semibold leading-tight tracking-normal mb-2">
+                                    <label htmlFor="email" className="dark:text-white text-sm font-semibold leading-tight tracking-normal mb-2">
                                         Email
                                     </label>
                                     <input required id="email" name="email" type="email" className="focus:outline-none focus:border focus:border-indigo-700 font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder />
@@ -60,7 +60,7 @@ const Contact = () => {
                         <div className="flex w-full flex-wrap">
                             <div className="w-2/4 max-w-xs">
                                 <div className="flex flex-col">
-                                    <label htmlFor="phone" className="text-black text-sm font-semibold leading-tight tracking-normal mb-2">
+                                    <label htmlFor="phone" className="dark:text-white text-sm font-semibold leading-tight tracking-normal mb-2">
                                         Celular
                                     </label>
                                     <input required id="phone" name="phone" type="tel" className="focus:outline-none focus:border focus:border-indigo-700 font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder />
@@ -69,12 +69,12 @@ const Contact = () => {
                         </div>
                         <div className="w-full mt-6">
                             <div className="flex flex-col">
-                                <label className="text-sm font-semibold text-black mb-2" htmlFor="message">
+                                <label className="text-sm font-semibold dark:text-white mb-2" htmlFor="message">
                                     Mensaje
                                 </label>
                                 <textarea placeholder name="message" className="border-gray-300 border mb-4 rounded py-2 text-sm outline-none resize-none px-3 focus:border focus:border-indigo-700" rows={8} id="message" defaultValue={''} />
                             </div>
-                            <button type="submit" className="focus:outline-none bg-green transition duration-150 ease-in-out rounded text-black px-8 py-3 text-sm leading-6">
+                            <button type="submit" className="focus:outline-none bg-green transition duration-150 ease-in-out rounded dark:text-white px-8 py-3 text-sm leading-6">
                               Aceptar
                             </button>
                         </div>
